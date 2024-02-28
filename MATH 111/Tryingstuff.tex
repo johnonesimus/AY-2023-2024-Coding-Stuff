@@ -1,0 +1,33 @@
+\documentclass[12pt,a4]{article}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Figures/}{#1.pdf_tex}
+}
+
+\begin{figure}[H]
+    \centering
+    
+    \caption{title}
+    \label{fig:text}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \incfig{
+}
+    \caption{title}
+    \begin{figure}[H]
+        \centering
+        \incfig{    \label{fig:}
+        \caption{title}
+        \label{fig:    \label{fig:}
+    \end{figure}
+}
+\end{figure}
